@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus - Clases</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+
+        header {
+            background-color: #121212;
+            padding: 1px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            max-height: 110px;
+            width: auto;
+            margin: 10px 10px 5px 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 120px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-size: 1.2em;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: transparent;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover::after {
+            background-color: rgba(214, 234, 248);
+        }
+
+        .login-icon {
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        .main-content {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .main-content h1 {
+            font-family: 'Anton', sans-serif;
+            font-size: 2.5em;
+            margin-top: 0;
+        }
+
+        .main-content p {
+            font-size: 1.5em;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .class-schedule {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .class-card {
+            background-color: #1f1f1f;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        .class-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: rgba(214, 234, 248);
+        }
+
+        .class-card p {
+            margin: 5px 0;
+            font-size: 1.2em;
+        }
+
+        .class-card .time {
+            color: #ccc;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="home.html">
+    <img src="https://drive.google.com/thumbnail?id=1GpqFFXpvgI8rNzqAdIb_TgaBkT_rAsdK" alt="Logo Gimnasio">
+    </a>
+    <nav>
+        <ul>
+            <li><a href="home.html">Inicio</a></li>
+            <li><a href="clases.html">Clases</a></li>
+            <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="login-icon">
+        <a href="login.html">&#128100;</a>
+    </div>
+</header>
+
+<main class="main-content">
+    
+    <p>Consulta nuestro horario y elige la clase que más te guste</p>
+
+    <div class="class-schedule">
+        <div class="class-card">
+            <h3>Yoga</h3>
+            <p>Profesor: María López</p>
+            <p class="time">Lunes a Viernes: 8:00 - 9:00 </p>
+        </div>
+        <div class="class-card">
+            <h3>Aerobic</h3>
+            <p>Profesor: Carlos García</p>
+            <p class="time">Martes y Jueves: 10:00 - 11:30 </p>
+        </div>
+        <div class="class-card">
+            <h3>Zumba</h3>
+            <p>Profesor: Juan Pérez</p>
+            <p class="time">Lunes, Miércoles y Viernes: 18:00 - 19:00</p>
+        </div>
+        <div class="class-card">
+            <h3>Pilates</h3>
+            <p>Profesor: María López</p>
+            <p class="time">Lunes y Sábado: 11:00 - 12:00</p>
+        </div>
+        <div class="class-card">
+            <h3>Funcional Training</h3>
+            <p>Profesor: Carlos García</p>
+            <p class="time">Lunes y Martes: 17:00 - 18:00</p>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>

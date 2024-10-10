@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus - Sobre Nosotros</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+        header {
+            background-color: #121212;
+            padding: 1px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header img {
+            max-height: 110px;
+            width: auto;
+            margin: 10px 10px 5px 50px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 120px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-size: 1.2em;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: transparent;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover::after {
+            background-color: rgba(214, 234, 248);
+            width: 100%;
+        }
+
+        .login-icon {
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+        .main-content {
+            padding: 40px;
+            text-align: center;
+        }
+        .main-content h1 {
+            font-family: 'Anton', sans-serif;
+            font-size: 2em;
+            margin-top: 0px;
+            color: rgba(214, 234, 248);
+
+        }
+        .main-content p {
+            font-size: 1.5em;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        .team-section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .team-member {
+            background-color: #1f1f1f;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            width: 250px;
+        }
+        .team-member img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .team-member h3 {
+            margin: 15px 0 5px;
+            font-size: 1.5em;
+        }
+        .team-member p  {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .team-member .level{
+            margin: 0;
+            font-size: 1.1em;
+            color: rgba(214, 234, 248);
+        }
+        .team-member .formation {
+            margin-top: 5px;
+            font-size: 1em;
+            color: #ccc; /* Color más claro para el texto de la formación */
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="home.html">
+    <img src="https://drive.google.com/thumbnail?id=1GpqFFXpvgI8rNzqAdIb_TgaBkT_rAsdK" alt="Logo Gimnasio">
+    </a>
+    <nav>
+        <ul>
+            <li><a href="home.html">Inicio</a></li>
+            <li><a href="clases.html">Clases</a></li>
+            <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="login-icon">
+        <a href="login.html">&#128100;</a>
+    </div>
+</header>
+
+<main class="main-content">
+    <h1>¿Quíenes somos?</h1>
+    <p>Equipo multidisciplinar y profesional enfocado en hacerte progresar sea cual sea tu nivel.</p> <p>Formación, experiencia y pasión son las palabras que definirían al equipo de Focus fitness.</p>
+
+    
+    <div class="team-section">
+        <div class="team-member">
+            <img src="imagenes/jefe.png" alt="Entrenador 1">
+            <h3>Juan Pérez</h3>
+            <p class="level">Jefe de Sala</p>
+            <br>
+            <p class="formation">- Grado en Ciencias de la Actividad Física</p>
+            <br>
+            <p class="formation">- Grado en Nutrición y Dietética</p>
+            <br>
+            <p class="formation">- Certificado de Profesionalidad en Acondicionamiento Físico</p>
+        </div>
+        <div class="team-member">
+            <img src="imagenes/yoga.png" alt="Entrenadora 2">
+            <h3>María López</h3>
+            <p class="level">Especialista en yoga</p>
+            <br>
+            <p class="formation">- Certificación en Yoga Avanzado</p>
+            <br>
+            <p class="formation">- Certificado en Pilates 2.0</p>
+        </div>
+        <div class="team-member">
+            <img src="imagenes/fuerza.png" alt="Entrenador 3">
+            <h3>Carlos García</h3>
+            <p class="level">Entrenador de Sala</p>
+            <br>
+            <p class="formation">- Técnico Superior de Acondicionamiento Físico</p>
+            <br>
+            <p class="formation">- Certificado en Nutrición Deportiva</p>
+        </div>
+    </div>
+</main>
+</body>
+</html>

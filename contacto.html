@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+
+        header {
+            background-color: #121212;
+            padding: 1px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            max-height: 110px;
+            width: auto;
+            margin: 10px 10px 5px 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 120px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-size: 1.2em;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: transparent;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover::after {
+            background-color: rgba(214, 234, 248);
+        }
+
+        .login-icon {
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        .main-content {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .main-content h1 {
+            font-family: 'Anton', sans-serif;
+            font-size: 2.5em;
+            margin-top: 0;
+        }
+
+        .main-content p {
+            font-size: 1.5em;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #f0f0f0;
+            font-size: 1em;
+        }
+
+        .contact-form button {
+            background-color: #ebdb4d;
+            color: #000000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: rgba(214, 234, 248);
+
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="home.html">
+    <img src="https://drive.google.com/thumbnail?id=1GpqFFXpvgI8rNzqAdIb_TgaBkT_rAsdK" alt="Logo Gimnasio">
+    </a>
+    <nav>
+        <ul>
+            <li><a href="home.html">Inicio</a></li>
+            <li><a href="clases.html">Clases</a></li>
+            <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="login-icon">
+        <a href="login.html">&#128100;</a>
+    </div>
+</header>
+
+<main class="main-content">
+    
+    <p>Si tienes alguna duda o necesitas reportar una incidencia, completa el siguiente formulario y nos pondremos en contacto contigo.</p>
+
+    <div class="contact-form">
+        <form action="enviar_contacto.php" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono">
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</main>
+
+</body>
+</html>
